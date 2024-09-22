@@ -1,5 +1,5 @@
 <?php
-  include 'bd.php';
+  include './bd.php';
 
    /* try {
         $database = new PDO("mysql:host=$server; dbname=gestion-ecole", $username, $password);
@@ -94,7 +94,7 @@
 									<div class="row">
 										<div class="col-lg-12">
 											<div class="form-group">
-												<input type="text" name="username" placeholder="nom" required>
+												<input type="text" name="username" placeholder="Nom" required>
 											</div>
 										</div>
 										<div class="col-lg-12">

@@ -1,5 +1,5 @@
 <?php
-	include 'bd.php';
+	include './bd.php';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST["username"];
@@ -148,13 +148,13 @@
 
 										<div class="col-lg-12">
 											<div class="form-group">
-												<input type="text" name="ecole" placeholder="école" required>
+												<input type="text" name="ecole" placeholder="Ecole" required>
 											</div>
 										</div>
 										
 										<div class="col-lg-12">
 											<div class="form-group">
-												<input type="password" name="password" placeholder="Créer mot de passe" required>
+												<input type="password" name="password" placeholder="Créer votre mot de passe" required>
 											</div>
 										</div>
 										<div class="col-lg-12">
