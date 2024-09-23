@@ -1,3 +1,8 @@
+<?php
+	include "./bd.php";
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,12 +105,12 @@
 						</div>
 					</div>
 					<div class="row my-2">
-						<div class="col-lg-6 col-md-12 col-12">
-							<h2 class="fs-2 fw-bold">Titre de la vidéo</h3>
+						<div class="col-lg-9 col-md-12 col-12">
+							<h2 class="fs-2 fw-bold">Leçon 1 - Titre de la leçon</h3>
 							<p class="text-muted fs-6 pt-2 pb-2">Chapitre 1 - Nom du chapitre</p>
 							<div class="border-bottom my-2"></div>
 						</div>
-						<div class="col-lg-6 col-md-12 col-12 text-end">
+						<div class="col-lg-3 col-md-12 col-12 text-end">
 							<button class="btn btn-primary"onclick ="playvideo()">lecture</button>
 							<button class="btn btn-primary"onclick="pausevideo()">pause</button>
 							<!-- <div class="d-flex align-items-center">
@@ -144,7 +149,7 @@
 									<div class="row">
 										<div class="col-lg-8 col-md-8 col-8"></div>
 										<div class="col-lg-4 col-mg-4 col-4 text-end">
-											<a href="" class="btn btn-primary text-white">Commencer le Quiz</a>
+											<a href="./quiz.php" class="btn btn-primary text-white">Commencer le Quiz</a>
 										</div>
 									</div>
 								</div>
@@ -157,72 +162,102 @@
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="bg-light rounded-3 shadow-sm px-4 py-4">
 								<form action="#" method="post" class="form">
-									<input type="search" name="search" class="form-control rounded-2 w-100 px-3 py-2" placeholder="Rechercher les cours">
+									<input type="search" name="search" class="form-control rounded-2 w-100 px-3 py-2" placeholder="Rechercher une leçon">
 								</form>
 							</div>
 						</div>
 					</div>
 					<div class="row my-3">
+						<div class="col-lg-12 col-md-12 col-12 my-2">
+							<h4 class="fs-5 fw-bold pb-2">Leçons</h3>
+						</div>
 						<div class="overflow-y-scroll" style="height: 60vh; display: -webkit-box; -webkit-box-orient: vertical;" id="all-cours">
 							<div class="col-lg-12 col-md-12 col-12 my-2">
 								<a href="#">
-									<div class="card bg-light border-0 shadow-sm">
+									<div class="card border-0 shadow">
 										<div class="card-body">
-											<h4 class="card-text fs-5">Titre du cours</h4>
-											<small class="text-muted">Chapitre 1 - Nom du chapitre</small>
+											<h4 class="card-text fw-bold fs-5">Titre du leçon</h4>
+											<small class="text-muted">leçon 2 - 11 min</small>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12 my-2">
 								<a href="#">
-									<div class="card bg-light border-0 shadow-sm">
+									<div class="card border-0 shadow">
 										<div class="card-body">
-											<h4 class="card-text fs-5">Titre du cours</h4>
-											<small class="text-muted">Chapitre 1 - Nom du chapitre</small>
+											<h4 class="card-text fw-bold fs-5">Titre du leçon</h4>
+											<small class="text-muted">leçon 3 - 9 min</small>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12 my-2">
 								<a href="#">
-									<div class="card bg-light border-0 shadow-sm">
+									<div class="card border-0 shadow">
 										<div class="card-body">
-											<h4 class="card-text fs-5">Titre du cours</h4>
-											<small class="text-muted">Chapitre 1 - Nom du chapitre</small>
+											<h4 class="card-text fw-bold fs-5">Titre du leçon</h4>
+											<small class="text-muted">leçon 4 - 6 min</small>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12 my-2">
 								<a href="#">
-									<div class="card bg-light border-0 shadow-sm">
+									<div class="card border-0 shadow">
 										<div class="card-body">
-											<h4 class="card-text fs-5">Titre du cours</h4>
-											<small class="text-muted">Chapitre 1 - Nom du chapitre</small>
+											<h4 class="card-text fw-bold fs-5">Titre du leçon</h4>
+											<small class="text-muted">leçon 5 - 12 min</small>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12 my-2">
 								<a href="#">
-									<div class="card bg-light border-0 shadow-sm">
+									<div class="card border-0 shadow">
 										<div class="card-body">
-											<h4 class="card-text fs-5">Titre du cours</h4>
-											<small class="text-muted">Chapitre 1 - Nom du chapitre</small>
+											<h4 class="card-text fw-bold fs-5">Titre du leçon</h4>
+											<small class="text-muted">leçon 6 - 16 min</small>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="col-lg-12 col-md-12 col-12 my-2">
 								<a href="#">
-									<div class="card bg-light border-0 shadow-sm">
+									<div class="card border-0 shadow">
 										<div class="card-body">
-											<h4 class="card-text fs-5">Titre du cours</h4>
-											<small class="text-muted">Chapitre 1 - Nom du chapitre</small>
+											<h4 class="card-text fw-bold fs-5">Titre du leçon</h4>
+											<small class="text-muted">leçon 7 - 9 min</small>
 										</div>
 									</div>
 								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row my-3">
+						<div class="col-lg-12 col-md-12 col-12 mt-4">
+							<h4 class="fs-5 fw-bold pb-2">Autres chapitres</h3>
+							<div class="main-sidebar mt-2">
+								<div class="single-widget category px-4 py-4">
+										<ul class="categor-list m-0">
+											<?php
+												$r1 = $bdd->query("SELECT * FROM course");
+												$cours= $r1->fetchall();
+
+												if ($r1->rowcount() > 0 ) {
+													foreach ($cours as $key => $donnees) {
+														?>
+															<li>
+																<a href="./chapitre-details.php?id=<?php echo $donnees["courseId"] ?>"><?php echo $donnees['title']; ?></a>
+															</li>
+														<?php
+													}
+												}else{
+												echo "Aucun resultat...";
+												}
+											?>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
